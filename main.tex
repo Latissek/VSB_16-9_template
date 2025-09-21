@@ -1,0 +1,131 @@
+\documentclass{beamer}
+
+% ---------------------------
+% FONT SETUP
+% ---------------------------
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault} 
+
+% ---------------------------
+% COLOR SETUP (FEI default)
+% ---------------------------
+\definecolor{primary}{HTML}{00A499}   % main color 
+\definecolor{secondary}{HTML}{05C3DE} % accent color 
+
+\setbeamercolor{title}{fg=primary}
+\setbeamercolor{frametitle}{fg=primary}
+\setbeamercolor{structure}{fg=primary}
+\setbeamercolor{itemize item}{fg=secondary}
+
+% ---------------------------
+% HEADER AND FOOTER
+% ---------------------------
+\usepackage{graphicx}
+
+\setbeamertemplate{headline}{
+  \leavevmode
+  \vspace{0.2cm}
+  \hspace{0.2cm}
+  % small logo
+  \includegraphics[height=1.0cm]{pictures/logos/feilogo.png}
+  \par
+  % horizontal line under logo
+  \vspace{-0.2cm}
+  \color{secondary}\rule{3.4cm}{1pt} 
+  \vspace{-0.2cm}
+}
+
+% Page number in bottom-right
+\setbeamertemplate{footline}{
+  \leavevmode
+  \begin{beamercolorbox}[wd=\paperwidth,ht=3ex,dp=1ex]{footline}
+    \color{secondary}\hspace*{0.3cm}\rule{\dimexpr\paperwidth-0.6cm}{0.4pt}\par % line fits within left/right margin
+    \hspace*{0.3cm}\small VŠB - FEI % <-- you can insert custom text here
+    \hfill
+    \small\insertframenumber{}% right-aligned
+    \hspace*{0.3cm} % right padding
+  \end{beamercolorbox}
+}
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% ---------------------------
+% TITLE PAGE DESIGN
+% ---------------------------
+\setbeamertemplate{title page}{
+  \begin{centering}
+    % big logo
+    \includegraphics[height=2.5cm]{pictures/logos/feilogo.png}\par
+    \bigskip
+    \vfill
+    {\Huge\color{primary}\inserttitle\par}
+    \bigskip
+    {\Large\color{secondary}\insertsubtitle\par}
+    \bigskip
+    {\large\insertauthor\par}
+    \medskip
+    {\small\insertinstitute\par}
+    \medskip
+    {\small\insertdate\par}
+    \vfill
+  \end{centering}
+}
+
+% ---------------------------
+% DOCUMENT INFO
+% ---------------------------
+\title{Your Custom Presentation}
+\subtitle{Optional Subtitle}
+\author{Your Name}
+\institute{Your University}
+\date{\today}
+
+\begin{document}
+{
+% disable headline and footer just for title page
+\setbeamertemplate{headline}{} 
+\setbeamertemplate{footline}{}
+\begin{frame}
+  \titlepage
+\end{frame}
+}
+
+% ---------------------------
+% MAIN BODY - included are example pages feel free to delete
+% ---------------------------
+
+% Talble of contentes
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Introduction}
+  \begin{itemize}
+    \item First point
+    \item Second point
+    \item Third point
+  \end{itemize}
+\end{frame}
+
+\section{Main Content}
+
+\begin{frame}{Slide with Image}
+  \includegraphics[width=0.7\textwidth]{example-image}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}{Conclusion}
+  \begin{enumerate}
+    \item Key takeaway one
+    \item Key takeaway two
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \centering \Huge Questions?
+\end{frame}
+
+\end{document}
